@@ -14,7 +14,7 @@ use Magento\Framework\DB\Ddl\Table;
 class InstallSchema implements InstallSchemaInterface
 {
 
-    const COLUMN_GENDER_TOPPIK    =   'custom_gender';
+    const COLUMN_GENDER_TOPPIK    =   'gender_toppik';
     const SALES_ORDER_TABLE         =   'sales_order';
     const QUOTE_TABLE               =   'quote';
 

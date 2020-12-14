@@ -21,7 +21,7 @@ class Collection extends OrderCollection
                 ['kek' => 'sales_order'],
                 "(main_table.entity_id = kek.entity_id)",
                 [
-                    'kek.custom_gender as custom_gender'
+                    'kek.gender_toppik as gender_toppik'
                 ]
             );
         parent::_initSelect();

@@ -35,10 +35,10 @@ class GenderToppik extends Column
      */
     public function prepareDataSource(array $dataSource)
     {
-        file_put_contents(BP . '/var/log/canon.txt', "data: ". json_encode("mmm2") . "\n", FILE_APPEND | LOCK_EX);
         if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as & $item) {
-		        $gender = $item['custom_gender'] ?? NULL;
+file_put_contents(BP. '/var/log/data.log', print_r($item, true)."debug\n", FILE_APPEND | LOCK_EX);
+		$gender = $item['gender_toppik'] ?? NULL;
                 $item[$this->getData('name')] = $gender == NULL ? "prefer not to say" :
 					ucfirst($gender);
             }

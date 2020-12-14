@@ -15,11 +15,10 @@ define([
 
     return function () {
         var shippingAddress = quote.shippingAddress();
-
         if (shippingAddress['extension_attributes'] === undefined) {
-            shippingAddress['extension_attributes'] = {};
+shippingAddress['extension_attributes'] = {};
         }
-        shippingAddress['extension_attributes']['custom_gender'] = $('.custom_gender :checked').val();
+        shippingAddress['extension_attributes']['gender_toppik'] = $('.gender_toppik :checked').val();
 
         quote.shippingAddress(shippingAddress);
 

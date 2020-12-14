@@ -39,13 +39,10 @@ class ShippingInformationManagement
         $cartId,
         ShippingInformationInterface $addressInformation
     ) {
-        // file_put_contents(BP . '/var/log/canon.txt', "data: ". json_encode($addressInformation->getShippingAddress()->getExtensionAttributes()) . "\n", FILE_APPEND | LOCK_EX);
         $extensionAttribute = $addressInformation->getShippingAddress()->getExtensionAttributes();
-
-        // $genderToppik = $extensionAttribute->getСustomGender();
-        $genderToppik = "male";
+        $genderToppik = $extensionAttribute->getGenderToppik();
         $quote = $this->_quoteRepository->getActive($cartId);
-        $quote->setСustomGender($genderToppik);
+        $quote->setGenderToppik($genderToppik);
     }
 
 }

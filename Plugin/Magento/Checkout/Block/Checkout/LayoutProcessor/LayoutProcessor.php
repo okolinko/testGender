@@ -20,7 +20,7 @@ class LayoutProcessor {
 	 * @return array
 	 */
 	public function afterProcess(\Magento\Checkout\Block\Checkout\LayoutProcessor $subject, $result) {
-		$customAttributeCode = 'custom_gender';
+		$customAttributeCode = 'gender_toppik';
 		$customField = [
 			'component' => 'Magento_Ui/js/form/element/abstract',
 			'config' => [
